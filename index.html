@@ -28,17 +28,16 @@
       overflow: hidden;
     }
 
-    img {
-      width: min(70vw, 360px);
-      height: auto;
-      display: block;
+    .emoji {
+      font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+      font-size: clamp(120px, 35vw, 360px);
+      line-height: 1;
       user-select: none;
-      pointer-events: none;
     }
   </style>
 </head>
 
 <body>
-  <img src="distorted-face-emoji-transparent.png" alt="Distorted face emoji" />
+  <div class="emoji">🫪</div>
 </body>
 </html>
