@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MXNCR4VW');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Jatin Gagwani</title>
+  <meta name="description" content="Data Analyst to Marketing and Business Guy (Still Figuring It Out)" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Sora', sans-serif; background: #fff; color: #323232; }
+
+    @keyframes float {
+      0%   { transform: translateY(0); }
+      25%  { transform: translateY(-18px); }
+      50%  { transform: translateY(4px); }
+      75%  { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
+    }
+    .float { animation: float 1.4s ease-in-out infinite; }
+
+    /* ─── PILL HEADER ─── */
+    #site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 14px 20px;
+      transition: transform 0.32s ease;
+    }
+    #site-header.header-hidden { transform: translateY(-110%); }
+    .header-pill {
+      background: rgba(246,246,246,0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 100px;
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+    }
+    .header-logo-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .header-logo-text {
+      font-family: 'Sora', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #111;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    .header-nav-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 15px;
+      color: #333;
+      padding: 8px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .header-nav-link:hover { background: rgba(0,0,0,0.06); color: #111; }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXNCR4VW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ─── HEADER ─── -->
+  <header id="site-header">
+    <div class="header-pill">
+      <a href="index.html" class="header-logo-link">
+        <svg width="28" height="28" viewBox="0 0 29.2812 29.2812" fill="none">
+          <path clip-rule="evenodd" d="M7.34047 0H0V14.6003H7.34047C3.30724 14.6003 0 17.9075 0 21.9407V29.2812H14.6003V21.9407C14.6003 25.974 17.9075 29.2812 21.9407 29.2812H29.2812V14.6809H21.9407C25.974 14.6809 29.2812 11.3737 29.2812 7.34047V0H14.6809V7.34047C14.6809 3.30724 11.3737 0 7.34047 0ZM14.6003 14.6003H7.2598C11.293 14.6003 14.6003 17.9075 14.6003 21.9407V14.6003ZM14.6003 14.6003V7.2598C14.6003 11.293 17.9075 14.6003 21.9407 14.6003H14.6003Z" fill="#010101" fill-rule="evenodd"/>
+          <path d="M7.5018 8.06645C7.5018 8.30844 7.42113 8.46977 7.17914 8.6311C6.93714 8.79243 6.61449 8.87309 6.29183 8.87309C5.96917 8.87309 5.64651 8.87309 5.40452 8.6311C5.16253 8.46977 5.08186 8.30844 5.08186 8.06645C5.08186 7.82445 5.08186 7.74379 5.24319 7.66312C5.32385 7.66312 5.48518 7.50179 5.64651 7.50179C5.80784 7.50179 5.88851 7.50179 5.96917 7.66312C6.04983 7.66312 6.1305 7.90512 6.1305 8.06645V8.46977H6.45316V8.06645C6.45316 8.06645 6.37249 7.90512 6.29183 7.82445L6.1305 7.50179V5.88851C6.1305 5.72718 6.1305 5.88851 6.04983 5.88851H5.80784V5.56585H7.58246V5.72718C7.58246 5.72718 7.58246 5.88851 7.42113 5.88851H7.2598C7.17914 6.04983 7.2598 5.88851 7.2598 6.04983V8.22777H7.5018V8.06645Z" fill="white"/>
+          <path d="M23.7154 22.9894V23.1507H23.3927L23.2314 23.07H23.07L22.9087 23.1507C22.7474 23.2314 22.7474 23.1507 22.6667 23.2314H22.3441C22.1021 23.2314 21.8601 23.2314 21.6181 23.07C21.3761 23.07 21.2148 22.828 21.0534 22.7474C20.8921 22.586 20.8114 22.4247 20.7308 22.1827V21.4567C20.7308 21.2148 20.7308 20.9728 20.8921 20.7308C20.8921 20.4888 21.1341 20.3274 21.2954 20.1661C21.4567 20.0048 21.6181 19.8435 21.8601 19.7628C22.1021 19.6821 22.3441 19.6015 22.5861 19.6015H23.7154V19.7628L23.9573 20.6501V20.8114H23.6347C23.6347 20.5694 23.4734 20.4081 23.3927 20.2468C23.3927 20.1661 23.1507 20.0855 23.07 20.0048H22.7474C22.586 20.0048 22.4247 20.0048 22.2634 20.1661C22.1021 20.2468 22.0214 20.4081 21.9407 20.5694V22.0214C21.9407 22.2634 22.1021 22.4247 22.2634 22.5054C22.4247 22.586 22.586 22.6667 22.7474 22.6667V22.0214H22.5861V21.7794H24.1993V23.1507H24.038L23.7154 22.9894Z" fill="white"/>
+        </svg>
+        <span class="header-logo-text">JATIN GAGWANI</span>
+      </a>
+      <nav>
+        <a href="index.html" class="header-nav-link">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ─── ABOUT SECTION ─── -->
+  <section style="background:#fff;padding-top:90px;">
+    <div style="max-width:1920px;margin:0 auto;padding:0 57px;">
+
+      <div class="about-grid">
+
+        <!-- Col 1 – Heading + role -->
+        <div class="about-col-text-left">
+          <h2 style="font-size:clamp(36px,4vw,56px);font-weight:700;color:#323232;letter-spacing:-0.01em;margin-bottom:24px;">
+            ABOUT JATIN
+          </h2>
+          <p style="font-size:16px;color:#323232;line-height:1.65;">
+            Data Analyst to<br />
+            Marketing and Business Guy<br />
+            (Still Figuring It Out)
+          </p>
+        </div>
+
+        <!-- Col 2 – Portrait -->
+        <div class="about-col-portrait">
+          <img
+            src="assets/about/jatin-portrait.png"
+            alt="Jatin Gagwani portrait"
+            class="portrait-img"
+          />
+        </div>
+
+        <!-- Col 3 – Bio + sticker -->
+        <div class="about-col-text-right">
+          <p style="font-size:16px;color:#323232;line-height:1.65;margin-bottom:20px;">
+            So, I started my career as a data analyst—because spreadsheets
+            seemed like a good idea at the time. But then I realised I was better
+            at making things look good than making them add up.
+          </p>
+          <p style="font-size:16px;color:#323232;line-height:1.65;margin-bottom:20px;">
+            Fast forward, and here I am, a marketing and business guy, pursuing
+            IB &amp; E at Symbiosis, and while I don't have it all figured out,
+            I'm definitely more fun to work with than a spreadsheet.
+          </p>
+          <p style="font-size:16px;color:#323232;line-height:1.65;font-weight:600;margin-bottom:24px;">
+            And yes, my grandma is still convinced I work in IT.
+          </p>
+          <div style="max-width:350px;">
+            <img src="assets/about/jatin-degree-sticker.png" alt="I don't have a degree, I hope that's okay" style="width:100%;height:auto;" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PHILOSOPHY SECTION ─── -->
+  <section style="background:#fff;padding:64px 0 80px;">
+    <div style="max-width:1920px;margin:0 auto;padding:0 57px;">
+
+      <p style="font-size:13px;font-weight:600;color:#323232;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:80px;">
+        My Philosophy.
+      </p>
+
+      <div class="phil-grid">
+
+        <!-- Col 1 – Floating hand -->
+        <div style="display:flex;justify-content:center;">
+          <div class="float" style="width:100%;max-width:329px;">
+            <img src="assets/about/jatin-philosophy.png" alt="Jatin Gagwani hand gesture" style="width:100%;height:auto;" />
+          </div>
+        </div>
+
+        <!-- Col 2 – Text -->
+        <div class="phil-text">
+          <p style="font-size:16px;color:#323232;line-height:1.65;margin-bottom:20px;">
+            I believe that the best marketing comes from a mix of data,
+            creativity, and a lot of &ldquo;<strong>let's see what happens</strong>.&rdquo;
+            You can have all the data in the world, but without a little bit of magic, it's just numbers.
+          </p>
+          <p style="font-size:16px;color:#323232;line-height:1.65;">
+            I'm passionate about helping brands grow, even if it means
+            explaining it to my grandma with hand gestures and a flowchart.
+          </p>
+        </div>
+
+        <!-- Col 3 – Sunset photo -->
+        <div style="display:flex;justify-content:flex-end;">
+          <img src="assets/about/jatin-sunset.png" alt="Jatin Gagwani at sunset" class="sunset-img" />
+        </div>
+
+      </div>
+
+      <!-- Download Resume -->
+      <div style="display:flex;justify-content:center;margin-top:64px;">
+        <a
+          href="assets/Jatin-Gagwani-Resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+          class="resume-btn"
+        >
+          Download Resume
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer style="background:#000;color:#fff;">
+    <div style="max-width:1920px;margin:0 auto;padding:80px 57px 48px;">
+
+      <!-- Logo top-left -->
+      <div style="margin-bottom:100px;">
+        <img src="assets/about/footer-logo.png" alt="Jatin Gagwani Inc" style="width:clamp(260px,35vw,480px);height:auto;" />
+      </div>
+
+      <!-- Bottom row: nav | social | email -->
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px;margin-bottom:40px;">
+
+        <!-- Nav -->
+        <nav style="display:flex;gap:32px;align-items:center;">
+          <a href="index.html" style="font-size:20px;color:#979797;text-decoration:none;letter-spacing:1px;font-weight:700;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#979797'">Home</a>
+          <a href="about.html" style="font-size:20px;color:#fff;text-decoration:none;letter-spacing:1px;font-weight:700;transition:color 0.2s;" onmouseover="this.style.color='#979797'" onmouseout="this.style.color='#fff'">About</a>
+        </nav>
+
+        <!-- Social icons -->
+        <div style="display:flex;align-items:center;gap:36px;">
+          <a href="https://github.com/JatinGagwani" target="_blank" rel="noreferrer" aria-label="GitHub" style="width:30px;height:30px;flex-shrink:0;">
+            <img src="assets/about/icon-github.png" alt="GitHub" style="width:100%;height:100%;object-fit:contain;" />
+          </a>
+          <a href="https://www.instagram.com/gagwani07" target="_blank" rel="noreferrer" aria-label="Instagram" style="width:30px;height:30px;flex-shrink:0;">
+            <img src="assets/about/icon-instagram.png" alt="Instagram" style="width:100%;height:100%;object-fit:contain;" />
+          </a>
+          <a href="https://www.linkedin.com/in/jatin-gagwani" target="_blank" rel="noreferrer" aria-label="LinkedIn" style="width:30px;height:30px;flex-shrink:0;">
+            <img src="assets/about/icon-linkedin.png" alt="LinkedIn" style="width:100%;height:100%;object-fit:contain;" />
+          </a>
+        </div>
+
+        <!-- Email -->
+        <a href="mailto:Hey@jatingagwani.com" style="font-size:clamp(18px,2vw,27px);color:#fff;text-decoration:none;font-weight:700;white-space:nowrap;transition:color 0.2s;" onmouseover="this.style.color='#979797'" onmouseout="this.style.color='#fff'">
+          Hey@jatingagwani.com
+        </a>
+
+      </div>
+
+      <div style="border-top:1px solid #333;margin-bottom:16px;"></div>
+
+      <div style="display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;">
+        <p style="font-size:12px;color:#fff;font-family:'Sora',sans-serif;">© 2026 by Jatin Gagwani.</p>
+        <a href="legal.html" style="font-family:'Sora',sans-serif;font-size:12px;color:#666;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#666'">Privacy &amp; Legal</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <style>
+    /* About 3-col grid */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr clamp(400px, 35vw, 660px) 1fr;
+      gap: 0;
+    }
+    .about-col-text-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 115px;
+      padding-right: 32px;
+    }
+    .about-col-portrait {
+      width: 100%;
+    }
+    .portrait-img {
+      width: 100%;
+      height: clamp(600px, 55vw, 835px);
+      object-fit: cover;
+      object-position: top;
+    }
+    .about-col-text-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 115px;
+      padding-left: 32px;
+    }
+
+    /* Philosophy 3-col grid */
+    .phil-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+    .phil-text {
+      padding-top: 105px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    .sunset-img {
+      width: 100%;
+      max-width: 607px;
+      height: 455px;
+      object-fit: cover;
+    }
+
+    /* Resume button */
+    .resume-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #000;
+      padding: 10px 32px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+      text-decoration: none;
+      font-family: 'Sora', sans-serif;
+      letter-spacing: 0.04em;
+      transition: background 0.2s, color 0.2s;
+    }
+    .resume-btn:hover { background: #000; color: #fff; }
+
+    /* Mobile */
+    @media (max-width: 1024px) {
+      header > div, section > div, footer > div { padding-left: 24px !important; padding-right: 24px !important; }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-top: 32px;
+      }
+      .about-col-portrait { order: -1; }
+      .about-col-text-left, .about-col-text-right { padding-top: 0; padding-left: 0; padding-right: 0; }
+      .portrait-img { height: auto; }
+
+      .phil-grid { grid-template-columns: 1fr; gap: 40px; }
+      .phil-text { padding-top: 0; padding-left: 0; padding-right: 0; }
+      .sunset-img { height: auto; max-width: 100%; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .footer-grid > div, .footer-grid > nav { justify-content: center !important; padding-left: 0 !important; }
+    }
+  </style>
+
+  <script>
+    const header = document.getElementById('site-header');
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const currentY = window.scrollY;
+      if (currentY <= 40) {
+        header.classList.remove('header-hidden');
+      } else if (currentY < lastScrollY) {
+        header.classList.remove('header-hidden');
+      } else if (currentY > lastScrollY + 4) {
+        header.classList.add('header-hidden');
+      }
+      lastScrollY = currentY;
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
