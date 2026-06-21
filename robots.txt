@@ -1,0 +1,24 @@
+User-agent: *
+
+# ── Pages ──────────────────────────────────────────────────────
+Allow: /$
+Allow: /index.html
+Allow: /about.html
+Allow: /legal.html
+
+# ── Resume ─────────────────────────────────────────────────────
+Allow: /assets/Jatin-Gagwani-Resume.pdf
+
+# ── Personal photos (allow before the broad block below) ───────
+Allow: /assets/about/jatin-portrait.png
+Allow: /assets/about/jatin-sunset.png
+Allow: /assets/about/jatin-philosophy.png
+Allow: /assets/about/jatin-degree-sticker.png
+Allow: /assets/home/jatin-portrait.jpeg
+Allow: /assets/home/about-dog.jpeg
+
+# ── Block everything else in assets ────────────────────────────
+# (client videos, client work images, stock gifs, icons, logos)
+Disallow: /assets/
+
+Sitemap: https://jatingagwani.github.io/Portfolio-Website/sitemap.xml
