@@ -5,39 +5,39 @@
 
   <!-- ── Homepage ── -->
   <url>
-    <loc>https://jatingagwani.github.io/Portfolio-Website/</loc>
+    <loc>https://jatingagwani.com/</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://jatingagwani.github.io/Portfolio-Website/assets/home/jatin-portrait.jpeg</image:loc>
+      <image:loc>https://jatingagwani.com/assets/home/jatin-portrait.jpeg</image:loc>
       <image:title>Jatin Gagwani – Digital Marketing Architect</image:title>
     </image:image>
   </url>
 
   <!-- ── About ── -->
   <url>
-    <loc>https://jatingagwani.github.io/Portfolio-Website/about.html</loc>
+    <loc>https://jatingagwani.com/about.html</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://jatingagwani.github.io/Portfolio-Website/assets/about/jatin-portrait.png</image:loc>
+      <image:loc>https://jatingagwani.com/assets/about/jatin-portrait.png</image:loc>
       <image:title>Jatin Gagwani</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://jatingagwani.github.io/Portfolio-Website/assets/about/jatin-sunset.png</image:loc>
+      <image:loc>https://jatingagwani.com/assets/about/jatin-sunset.png</image:loc>
       <image:title>Jatin Gagwani</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://jatingagwani.github.io/Portfolio-Website/assets/about/jatin-philosophy.png</image:loc>
+      <image:loc>https://jatingagwani.com/assets/about/jatin-philosophy.png</image:loc>
       <image:title>Jatin Gagwani – My Philosophy</image:title>
     </image:image>
   </url>
 
   <!-- ── Legal ── -->
   <url>
-    <loc>https://jatingagwani.github.io/Portfolio-Website/legal.html</loc>
+    <loc>https://jatingagwani.com/legal.html</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>

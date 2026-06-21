@@ -21,4 +21,4 @@ Allow: /assets/home/about-dog.jpeg
 # (client videos, client work images, stock gifs, icons, logos)
 Disallow: /assets/
 
-Sitemap: https://jatingagwani.github.io/Portfolio-Website/sitemap.xml
+Sitemap: https://jatingagwani.com/sitemap.xml
