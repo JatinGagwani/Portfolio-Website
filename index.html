@@ -84,6 +84,14 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <!-- ─── TAP POPUP ─── -->
+  <div id="tap-popup">
+    <img src="/cat-scuba-dance.gif" alt="Scuba Cat" id="tap-cat" />
+    <p id="tap-title"></p>
+    <p id="tap-sub"></p>
+    <div id="tap-track"><div id="tap-bar"></div></div>
+  </div>
+
   <!-- ─── LOADER ─── -->
   <div id="loader">
     <svg width="36" height="36" viewBox="0 0 29.2812 29.2812" fill="none">
@@ -107,6 +115,7 @@
       </a>
       <nav class="header-nav">
         <a href="/blog" class="header-nav-link">Blog</a>
+        <button class="tap-btn" id="tap-btn">Tap</button>
       </nav>
     </div>
   </header>
@@ -394,6 +403,171 @@
         document.getElementById('loader').style.display = 'none';
       }
     })();
+  </script>
+
+  <style>
+    /* ─── TAP BUTTON ─── */
+    .tap-btn {
+      background: #111;
+      color: #fff;
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 9px 20px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      margin-left: 4px;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .tap-btn:hover { background: #333; }
+    .tap-btn:active { transform: scale(0.95); }
+
+    /* ─── TAP POPUP ─── */
+    #tap-popup {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(160%);
+      z-index: 9998;
+      background: #fff;
+      border-radius: 24px;
+      padding: 24px 28px 16px;
+      text-align: center;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.13);
+      width: 260px;
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+    }
+    #tap-popup.show {
+      transform: translateX(-50%) translateY(0);
+    }
+    #tap-cat {
+      width: 130px;
+      height: 130px;
+      object-fit: contain;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #tap-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.45;
+      margin-bottom: 4px;
+    }
+    #tap-sub {
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      color: #aaa;
+      margin-bottom: 14px;
+    }
+    #tap-track {
+      height: 2px;
+      background: #f0f0f0;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    #tap-bar {
+      height: 100%;
+      width: 100%;
+      background: #111;
+      transform-origin: left;
+    }
+    @keyframes drain {
+      from { transform: scaleX(1); }
+      to   { transform: scaleX(0); }
+    }
+  </style>
+
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+    import { getDatabase, ref, set, get, push, remove, onValue, onDisconnect } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js';
+
+    const app = initializeApp({
+      apiKey: "AIzaSyC7N2et395UXdQ30TwQKzyP4fpJhu7P8hM",
+      authDomain: "website-interactive.firebaseapp.com",
+      databaseURL: "https://website-interactive-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "website-interactive",
+      storageBucket: "website-interactive.firebasestorage.app",
+      messagingSenderId: "528091548890",
+      appId: "1:528091548890:web:ff5a025b2331a35b8369e3"
+    });
+    const db = getDatabase(app);
+
+    /* ── User identity ── */
+    let uid = sessionStorage.getItem('jg_uid');
+    if (!uid) {
+      uid = Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2);
+      sessionStorage.setItem('jg_uid', uid);
+    }
+
+    /* ── Register online, auto-remove on disconnect ── */
+    const presenceRef = ref(db, `online/${uid}`);
+    set(presenceRef, true);
+    onDisconnect(presenceRef).remove();
+
+    /* ── Listen for incoming cats ── */
+    const inboxRef = ref(db, `messages/${uid}`);
+    onValue(inboxRef, snap => {
+      if (!snap.exists()) return;
+      showPopup('receiver');
+      remove(inboxRef);
+    });
+
+    /* ── Tap button ── */
+    document.getElementById('tap-btn').addEventListener('click', async () => {
+      showPopup('sender');
+      const snap = await get(ref(db, 'online'));
+      if (!snap.exists()) return;
+      const others = Object.keys(snap.val()).filter(id => id !== uid);
+      if (others.length === 0) {
+        setTimeout(() => showPopup('receiver'), 900);
+        return;
+      }
+      const target = others[Math.floor(Math.random() * others.length)];
+      push(ref(db, `messages/${target}`), { from: uid });
+    });
+
+    /* ── Popup helpers ── */
+    let popupTimer = null;
+
+    function showPopup(type) {
+      const popup = document.getElementById('tap-popup');
+      const title = document.getElementById('tap-title');
+      const sub   = document.getElementById('tap-sub');
+      const bar   = document.getElementById('tap-bar');
+
+      if (type === 'sender') {
+        title.textContent = 'You just sent a scuba cat to someone out there';
+        sub.textContent   = 'They have no idea what\'s coming 🐱';
+      } else {
+        title.textContent = 'Someone from the internet just sent you this';
+        sub.textContent   = 'You\'ve been scuba cat\'d 🐱';
+      }
+
+      bar.style.animation = 'none';
+      void bar.offsetWidth;
+      bar.style.animation = 'drain 4.5s linear forwards';
+
+      popup.classList.add('show');
+      clearTimeout(popupTimer);
+      popupTimer = setTimeout(hidePopup, 4500);
+    }
+
+    function hidePopup() {
+      document.getElementById('tap-popup').classList.remove('show');
+    }
+
+    document.getElementById('tap-popup').addEventListener('click', () => {
+      clearTimeout(popupTimer);
+      hidePopup();
+    });
   </script>
 
   <script>
