@@ -23,13 +23,14 @@
     body { font-family: 'Sora', sans-serif; background: #fff; color: #323232; }
 
     @keyframes float {
-      0%   { transform: translateY(0); }
-      25%  { transform: translateY(-18px); }
-      50%  { transform: translateY(4px); }
-      75%  { transform: translateY(-12px); }
-      100% { transform: translateY(0); }
+      0%   { transform: rotate(-8deg); }
+      50%  { transform: rotate(8deg); }
+      100% { transform: rotate(-8deg); }
     }
-    .float { animation: float 1.4s ease-in-out infinite; }
+    .float {
+      animation: float 1.6s ease-in-out infinite;
+      transform-origin: bottom center;
+    }
 
     /* ─── PILL HEADER ─── */
     #site-header {
