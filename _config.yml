@@ -1,0 +1,12 @@
+title: Jatin Gagwani
+description: Digital Marketing Architect
+url: "https://jatingagwani.com"
+baseurl: ""
+permalink: /blog/:title/
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+exclude:
+  - node_modules
+  - "*.sh"
