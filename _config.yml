@@ -3,6 +3,7 @@ description: Digital Marketing Architect
 url: "https://jatingagwani.com"
 baseurl: ""
 permalink: /blog/:title/
+future: true
 markdown: kramdown
 plugins:
   - jekyll-feed
