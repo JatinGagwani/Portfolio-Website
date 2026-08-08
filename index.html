@@ -83,6 +83,16 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <!-- ─── LOADER ─── -->
+  <div id="loader">
+    <svg width="36" height="36" viewBox="0 0 29.2812 29.2812" fill="none">
+      <path clip-rule="evenodd" d="M7.34047 0H0V14.6003H7.34047C3.30724 14.6003 0 17.9075 0 21.9407V29.2812H14.6003V21.9407C14.6003 25.974 17.9075 29.2812 21.9407 29.2812H29.2812V14.6809H21.9407C25.974 14.6809 29.2812 11.3737 29.2812 7.34047V0H14.6809V7.34047C14.6809 3.30724 11.3737 0 7.34047 0ZM14.6003 14.6003H7.2598C11.293 14.6003 14.6003 17.9075 14.6003 21.9407V14.6003ZM14.6003 14.6003V7.2598C14.6003 11.293 17.9075 14.6003 21.9407 14.6003H14.6003Z" fill="#111" fill-rule="evenodd"/>
+    </svg>
+    <div id="loader-track">
+      <div id="loader-bar"></div>
+    </div>
+  </div>
+
   <!-- ─── HEADER ─── -->
   <header id="site-header">
     <div class="header-pill">
@@ -339,6 +349,52 @@
     }
   </style>
 
+  <style>
+    #loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      transition: opacity 0.5s ease;
+    }
+    #loader.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+    #loader-track {
+      width: 120px;
+      height: 1px;
+      background: #e8e8e8;
+      position: relative;
+      overflow: hidden;
+    }
+    #loader-bar {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      width: 0%;
+      background: #111;
+      animation: load 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    @keyframes load {
+      0%   { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
+
+  <script>
+    (function() {
+      if (sessionStorage.getItem('jg_loaded')) {
+        document.getElementById('loader').style.display = 'none';
+      }
+    })();
+  </script>
+
   <script>
     const header = document.getElementById('site-header');
     let lastScrollY = window.scrollY;
@@ -353,6 +409,18 @@
       }
       lastScrollY = currentY;
     }, { passive: true });
+
+    /* ── Loader ── */
+    const loader = document.getElementById('loader');
+    if (loader && loader.style.display !== 'none') {
+      setTimeout(() => {
+        loader.classList.add('fade-out');
+        setTimeout(() => {
+          loader.style.display = 'none';
+          sessionStorage.setItem('jg_loaded', '1');
+        }, 500);
+      }, 1050);
+    }
   </script>
 
 </body>
